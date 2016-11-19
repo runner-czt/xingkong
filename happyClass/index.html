@@ -118,7 +118,7 @@
 			</div>
 
 			<div class="page page2">
-				<div class="js-animate animated title2" data-animate="pulse"></div>
+				<div class="js-animate animated title2" data-animate="pulse" id="title2"></div>
 				<div class="js-animate animated kuangkuang" data-animate="flash">
 					<div class="js-animate animated t1 shipin" data-animate="fadeInDown"></div>
 					<div class="js-animate animated t1-5 xianchang" data-animate="fadeInDown"></div>
@@ -202,9 +202,12 @@
 			</div>
 
 			<div class="page page4">
-
+				<div class="share">
+					<input type="button" class="weixin" value="微信分享" onclick="showShareTo();">
+					<input type="button" class="pengyouquan" value="朋友圈分享" onclick="showShareTo();">
+				</div>
 				<div class="footer">
-					<h3>开发人员：</h3>
+					<h3>Thanks:</h3>
 					<ul class="coder">
 						<li><span>宿疯</span></li>
 						<li><span>钟涛</span></li>
@@ -215,6 +218,14 @@
 						<li><span>日强</span></li>
 						<li><span>韵兴</span></li>
 					</ul>
+					<div class="copyright">
+						<a href="http://xingkong.us">www.xingkong.us</a>
+						<br>
+						<span>星空学生创新中心&copy;2016</span>
+					</div>
+				</div>
+				<div class="shareTo" style="display:none;">
+					
 				</div>
 			</div>
 		</div>
@@ -235,6 +246,7 @@
                 $('.page').eq(e.cur).find('.js-animate').each(function() {
                 	$(this).removeClass($(this).data('animate')).hide();
                 });
+                // 初始化条形图动画
                 $('.page').eq(e.cur).find('.skillbar').each(function(){
                 	$(this).find('.skillbar-bar').animate({
                 		width:$(this).attr('0%')
@@ -264,11 +276,6 @@
 
             }
         });
-        // 跳转到下一页
-        // $('.btn').on('click', function (e) {
-        // 	e.preventDefault();
-        // 	$.fn.fullpage.moveNext(true);
-        // });
         // 点击隐藏提示
         function hadeHint () {
         	Bar.on('click', function (e) {
@@ -285,6 +292,7 @@
         	e.preventDefault();
         	$(this).children('.skillbar-bar').removeClass('disable');
         	$(this).siblings('.skillbar').children('.skillbar-bar').addClass('disable');
+        	// 判断是否隐藏验证码
         	if (flag) {
         		$("#mask, #popup-captcha-mobile").hide();
         	}
@@ -304,7 +312,7 @@
     	var handlerPopupMobile = function (captchaObj) {
         // 将验证码加到id为captcha的元素里
         captchaObj.appendTo("#popup-captcha-mobile");
-        //拖动验证成功后两秒(可自行设置时间)自动发生跳转等行为
+        // 拖动验证成功后两秒(可自行设置时间)自动发生跳转等行为
         captchaObj.onSuccess(function () {
         	var validate = captchaObj.getValidate();
         	$.ajax({
@@ -322,6 +330,7 @@
                 },
                 success: function (data) {
                 	if (data && (data.status === "success")) {
+                		// 成功跳转到下一页
                 		$.fn.fullpage.moveNext(true);
                 	} else {
                 		$(document.body).html('<h1>登录失败</h1>');
@@ -348,6 +357,16 @@
             }, handlerPopupMobile);
         }
     });
+</script>
+<script>
+	// 引导微信分享
+	function showShareTo(){
+		$('.shareTo').show();
+	}
+	$('.shareTo').on('click', function(event) {
+		event.preventDefault();
+		$(this).hide();
+	});
 </script>
 </body>
 </html>
