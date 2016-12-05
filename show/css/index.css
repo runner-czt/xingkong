@@ -50,7 +50,10 @@ li
 footer
 {
     width: 1133px;
-    /*  height: 164px;*/
+    height: 216px;
+    position: relative;
+    top: -30px;
+    z-index: 1;
     margin: -2px auto 0;
 
     text-align: center;
@@ -64,6 +67,7 @@ h4
 }
 footer .banner-owner
 {
+    margin-top: 30px;
     font-size: 18px;
 
     display: inline-block;
@@ -211,6 +215,7 @@ footer .xingkong a
     margin: -70px auto 0;
 
     background: url(../images/3.png);
+    z-index: 2;
 }
 
 .cm .cm-direction
@@ -252,7 +257,7 @@ footer .xingkong a
 .cm .cm-show .show
 {
     position: absolute;
-    bottom: 132px;
+    bottom: 108px;
 }
 .cm .cm-show .img-list
 {
@@ -270,10 +275,150 @@ footer .xingkong a
     margin-right: 34px;
     margin-bottom: 26px;
 
-    background: url(../images/img.jpg);
+/*    background: url(../images/js1.jpg);*/
 }
 
 .cm .cm-show .btn
 {
     left: 250px;
+    bottom: 74px;
+}
+
+
+.js .js-direction
+{
+    float: right;
+
+    width: 478px;
+   /* height: 100%;*/
+   height: 660px;
+}
+.js .js-direction #js-direction-ul
+{
+    position: absolute;
+    top: 332px;
+    right: 72px;
+}
+.js .js-direction #js-direction-ul li
+{
+    margin-bottom: 38px;
+    padding-left: 23px;
+    text-align: right;
+}
+.js .js-direction #js-direction-ul .direction-on
+{
+    background: url(../images/icon.png) center left no-repeat;
+}
+.js .js-direction #js-direction-ul .direction-on a
+{
+    color: #fff;
+}
+
+.js .js-show
+{
+    position: relative;
+
+    float: left;
+
+    width: 658px;
+    /*height: 100%;*/
+    height: 660px;
+}
+.js .js-show .show
+{
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+}
+.js .js-show .img-list
+{
+    width: 612px;
+    height: 392px;
+}
+.js .js-show .img-list li
+{
+    position: relative;
+
+    float: left;
+
+    width: 170px;
+    height: 170px;
+    margin-right: 34px;
+    margin-bottom: 26px;
+
+/*    background: url(../images/js1.jpg);*/
+}
+
+.js .js-show .btn
+{
+    left: 343px;
+    bottom: 19px;
+    width: 52px;
+}
+
+.yc .yc-direction
+{
+    float: left;
+
+    width: 478px;
+    height: 100%;
+}
+.yc .yc-direction #yc-direction-ul
+{
+    position: absolute;
+    top: 304px;
+    left: 82px;
+}
+.yc .yc-direction #yc-direction-ul li
+{
+    margin-bottom: 38px;
+    padding-left: 23px;
+}
+.yc .yc-direction #yc-direction-ul .direction-on
+{
+    background: url(../images/icon.png) center left no-repeat;
+}
+.yc .yc-direction #yc-direction-ul .direction-on a
+{
+    color: #fff;
+}
+
+.yc .yc-show
+{
+    position: relative;
+
+    float: left;
+
+    width: 658px;
+    height: 100%;
+}
+.yc .yc-show .show
+{
+    position: absolute;
+    bottom: 84px;
+}
+.yc .yc-show .img-list
+{
+    width: 612px;
+    height: 392px;
+}
+.yc .yc-show .img-list li
+{
+    position: relative;
+
+    float: left;
+
+    width: 170px;
+    height: 170px;
+    margin-right: 34px;
+    margin-bottom: 26px;
+
+/*    background: url(../images/js1.jpg);*/
+}
+
+.yc .yc-show .btn
+{
+    left: 263px;
+    bottom: 54px;
+    width: 52px;
 }
