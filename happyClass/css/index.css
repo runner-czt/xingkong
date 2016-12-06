@@ -316,6 +316,17 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
+.tip{
+    color: #fff;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+.tip h4{
+    font-weight: lighter;
+}
+
 .share
 {
     position: absolute;
@@ -379,6 +390,8 @@
     background: url(../images/share.png) no-repeat top center;
     background-color: rgba(0,0,0,.5);
 }
+
+
 .footer
 {
     position: absolute;
