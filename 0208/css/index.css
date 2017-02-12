@@ -1,0 +1,84 @@
+html,body,div,span,h1,h2,h3,h4,h5,p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.page{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+}
+.page>div{
+    width: 100%;
+}
+.top-img{
+    height: 328px;
+    background: url("../images/top-img.png") top no-repeat;
+    background-size: 450px 230px;
+}
+@font-face {
+    font-family: "SourceHanSansCN-Bold";
+    src: url(../font/SourceHanSansCN-Bold.otf);
+}
+@font-face {
+    font-family: "SourceHanSansCN-Regular";
+    src: url(../font/SourceHanSansCN-Regular.otf);
+}
+.name{
+    font-family: "SourceHanSansCN-Bold";
+    font-size: 81px;
+    color: #008bff;
+    text-align: center;
+}
+.name .left{
+    margin-left: -59px;
+}
+.name .right{
+    margin-right: -59px;
+}
+
+.info{
+    background: url("../images/info-bg.png") no-repeat center;
+    background-size: 450px 283px;
+    color: #ffffff;
+    height: 283px;
+    font-family: "SourceHanSansCN-Regular";
+    text-align: center;
+
+}
+.info h3{
+    text-align: center;
+    margin-left: -300px;
+    padding-top: 30px;
+    font-size: 25px;
+}
+.info p{
+    font-size: 13px;
+}
+@media (max-width:320px){
+    .name{
+        font-size: 56px;
+    }
+    .info p{
+        font-size: 11px;
+    }
+    .info h3{
+        font-size: 17px;
+        margin-left: -215px;
+    }
+}
+.info-one{
+    margin-left: 24px;
+}
+.info-two{
+    margin-left: -24px;
+}
+.info-three{
+    margin-left: 24px;
+}
